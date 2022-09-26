@@ -26,8 +26,11 @@ body {
     border-radius: 8px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
-.focusedPassword:focus-within {
-    outline: 1px solid rgb(17, 255, 0);
+.focusedPasswordAllow:focus-within {
+    outline: 2px solid rgb(17, 255, 0);
+}
+.focusedPasswordDeny:focus-within {
+    outline: 2px solid rgb(255, 0, 0);
 }
 .inputBox input {
     position: relative;

@@ -7,68 +7,74 @@ let digit = document.querySelector("#number");
 let specialChar = document.querySelector("#special");
 let minLength = document.querySelector("#length");
 
-toggleBtn.addEventListener('click', function () {
-    if (pswrd.type === "password") {
-        pswrd.type = "text";
-        toggleBtn.classList.add("hide");
-    } else {
-        pswrd.type = "password";
-        toggleBtn.classList.remove("hide");
-    }
+toggleBtn.addEventListener("click", function () {
+  if (pswrd.type === "password") {
+    pswrd.type = "text";
+    toggleBtn.classList.add("hide");
+  } else {
+    pswrd.type = "password";
+    toggleBtn.classList.remove("hide");
+  }
 });
 
-pswrd.addEventListener('keyup', checkPassword);
+pswrd.addEventListener("keyup", checkPassword);
 
 function checkPassword() {
-    const lowerCaseLetters = new RegExp('(?=.*[a-z])');
-    const upperCaseLetters = new RegExp ('(?=.*[A-Z])');
-    const numbers = new RegExp ('(?=.*[0-9])');
-    const specialCharacters = new RegExp ('(?=.*[!@#\$%\^&\*])');
-    const minimumLength = new RegExp ('(?=.{8,})');
+  const lowerCaseLetters = new RegExp("(?=.*[a-z])");
+  const upperCaseLetters = new RegExp("(?=.*[A-Z])");
+  const numbers = new RegExp("(?=.*[0-9])");
+  const specialCharacters = new RegExp("(?=.*[!@#$%^&*])");
+  const minimumLength = new RegExp("(?=.{8,})");
 
-    if (lowerCaseLetters.test(pswrd.value)) {
-        lowerCase.classList.add("valid");
-    } else {
-        lowerCase.classList.remove("valid");
+  if (lowerCaseLetters.test(pswrd.value)) {
+    lowerCase.classList.add("valid");
+  } else {
+    lowerCase.classList.remove("valid");
+  }
+
+  if (upperCaseLetters.test(pswrd.value)) {
+    upperCase.classList.add("valid");
+  } else {
+    upperCase.classList.remove("valid");
+  }
+
+  if (numbers.test(pswrd.value)) {
+    digit.classList.add("valid");
+  } else {
+    digit.classList.remove("valid");
+  }
+
+  if (specialCharacters.test(pswrd.value)) {
+    specialChar.classList.add("valid");
+  } else {
+    specialChar.classList.remove("valid");
+  }
+
+  if (minimumLength.test(pswrd.value)) {
+    minLength.classList.add("valid");
+  } else {
+    minLength.classList.remove("valid");
+  }
+
+  const Focus = document.querySelector(".inputBox");
+  Focus.addEventListener("keyup", function () {
+    if (
+      lowerCaseLetters.test(pswrd.value) === true &&
+      upperCaseLetters.test(pswrd.value) === true &&
+      numbers.test(pswrd.value) === true &&
+      specialCharacters.test(pswrd.value) === true &&
+      minimumLength.test(pswrd.value) === true
+    ) {
+        Focus.classList.contains("focusedPasswordDeny");
+        Focus.classList.remove("focusedPasswordDeny");
+        Focus.classList.add("focusedPasswordAllow");
+    }else {
+        if(Focus.classList.contains("focusedPasswordAllow")){
+            Focus.classList.remove("focusedPasswordAllow");
+            Focus.classList.add("focusedPasswordDeny");
+        }
     }
-
-    if (upperCaseLetters.test(pswrd.value)) {
-        upperCase.classList.add("valid");
-    } else {
-        upperCase.classList.remove("valid");
-    }
-
-    if (numbers.test(pswrd.value)) {
-        digit.classList.add("valid");
-    } else {
-        digit.classList.remove("valid");
-    }
-
-    if (specialCharacters.test(pswrd.value)) {
-        specialChar.classList.add("valid");
-    } else {
-        specialChar.classList.remove("valid");
-    }
-
-    if (minimumLength.test(pswrd.value)) {
-        minLength.classList.add("valid");
-    } else {
-        minLength.classList.remove("valid");
-    }
-
-        const unFocus = document.querySelector(".inputBox");
-        unFocus.addEventListener("focusin", function () {
-          if (
-            lowerCaseLetters.test(pswrd.value) === true &&
-            upperCaseLetters.test(pswrd.value) === true &&
-            numbers.test(pswrd.value) === true &&
-            specialCharacters.test(pswrd.value) === true &&
-            minimumLength.test(pswrd.value) === true
-          ) {
-            unFocus.classList.add("focusedPassword");
-          } else {
-            unFocus.classList.remove("focusedPassword");
-          }
-        });
+  });
+    
+    
 }
-
