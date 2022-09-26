@@ -1,0 +1,17 @@
+// @import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background: #365fa1;
+}
+
+
+
+@import 'blocks/menu';
