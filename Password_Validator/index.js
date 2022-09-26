@@ -65,16 +65,13 @@ function checkPassword() {
       specialCharacters.test(pswrd.value) === true &&
       minimumLength.test(pswrd.value) === true
     ) {
-        Focus.classList.contains("focusedPasswordDeny");
-        Focus.classList.remove("focusedPasswordDeny");
-        Focus.classList.add("focusedPasswordAllow");
-    }else {
-        if(Focus.classList.contains("focusedPasswordAllow")){
-            Focus.classList.remove("focusedPasswordAllow");
-            Focus.classList.add("focusedPasswordDeny");
-        }
+      Focus.classList.contains("focusedPasswordDeny");
+      Focus.classList.remove("focusedPasswordDeny");
+      Focus.classList.add("focusedPasswordAllow");
+    } else {
+      Focus.classList.contains("focusedPasswordAllow");
+      Focus.classList.remove("focusedPasswordAllow");
+      Focus.classList.add("focusedPasswordDeny");
     }
   });
-    
-    
 }
