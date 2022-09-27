@@ -11,26 +11,48 @@ body {
     min-height: 100vh;
     background: #edf1f4;
 }
+.dark {
+    background: #282c2f;
+}
 .calculator {
     position: relative;
-    width: 340px;
-    padding: 20px;
+    min-width: 350px;
+    padding: 15px 25px;
     border-radius: 20px;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
+}
+.dark .calculator {
+    background: #33393e;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25), -15px -15px 20px rgba(255,255,255,0.1);
+}
+.togglebtn {
+    width: 60px;
+    height: 23px;
+    background: rgba(0, 0, 0, 0.55);
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
 }
 .buttons {
     position: relative;
     display: grid;
+    margin-top: 20px;
 }
 #value {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     position: relative;
     grid-column: span 4;
     user-select: none;
-    overflow: none;
-    width: 100%;
+    overflow: hidden;
+    width: 320px;
     text-align: end;
     color: #5166d6;
-    height: 100px;
+    height: 90px;
     line-height: 100px;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
     border-radius: 10px;
@@ -39,14 +61,18 @@ body {
     font-size: 50px;
     font-weight: 500;
 }
+.dark #value {
+    color: #eee;
+    box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.5), inset -15px -15px 20px rgba(255,255,255,0.1);
+}
 .buttons span {
     position: relative;
-    padding: 10px;
+    padding: 14px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 20px #fff;
     margin: 10px;
     cursor: pointer;
     user-select: none;
-    min-width: 40px;
+    min-width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,12 +82,20 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
     border-radius: 10px;
 }
+.dark .buttons span {
+    color: #eee;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 20px rgba(255,255,255,0.1);
+}
 .buttons span:active {
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fff;
     color: #f44336;
 }
+.dark .buttons span:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255,255,255,0.1);
+}
 #clear {
-    grid-column: span 2;
+    grid-column: span 1;
     background: #f44336;
     color: #fff;
     border: 2px solid #edf1f4;
@@ -78,7 +112,14 @@ body {
     color: #fff;
     border: 2px solid #edf1f4;
 }
-#clear:active, #plus:active, #equal:active {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff,
-    inset 5px 5px 10px rgba(0, 0, 0, 0.17);
+.dark #clear, .dark #plus, .dark #equal {
+    border: 2px solid #333;
+}
+#clear:active,
+#plus:active,
+#equal:active {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff, inset 5px 5px 10px rgba(0, 0, 0, 0.17);
+}
+.dark #clear:active, .dark #plus:active, .dark #equal:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
