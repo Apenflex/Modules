@@ -1,11 +1,18 @@
 let pswrd = document.querySelector("#pswrd");
 let toggleBtn = document.querySelector("#toggleBtn");
+let showCharactersModal = document.querySelector(".validation");
 
 let lowerCase = document.querySelector("#lower");
 let upperCase = document.querySelector("#upper");
 let digit = document.querySelector("#number");
 let specialChar = document.querySelector("#special");
 let minLength = document.querySelector("#length");
+
+const lowerCaseLetters = new RegExp("(?=.*[a-z])");
+const upperCaseLetters = new RegExp("(?=.*[A-Z])");
+const numbers = new RegExp("(?=.*[0-9])");
+const specialCharacters = new RegExp("(?=.*[!@#$%^&*])");
+const minimumLength = new RegExp("(?=.{8,})");
 
 toggleBtn.addEventListener("click", function () {
   if (pswrd.type === "password") {
@@ -17,15 +24,15 @@ toggleBtn.addEventListener("click", function () {
   }
 });
 
+pswrd.addEventListener("click", showHowManyCharacters);
+
+function showHowManyCharacters() {
+  showCharactersModal.classList.add("show");
+}
+
 pswrd.addEventListener("keyup", checkPassword);
 
 function checkPassword() {
-  const lowerCaseLetters = new RegExp("(?=.*[a-z])");
-  const upperCaseLetters = new RegExp("(?=.*[A-Z])");
-  const numbers = new RegExp("(?=.*[0-9])");
-  const specialCharacters = new RegExp("(?=.*[!@#$%^&*])");
-  const minimumLength = new RegExp("(?=.{8,})");
-
   if (lowerCaseLetters.test(pswrd.value)) {
     lowerCase.classList.add("valid");
   } else {
@@ -68,10 +75,12 @@ function checkPassword() {
       Focus.classList.contains("focusedPasswordDeny");
       Focus.classList.remove("focusedPasswordDeny");
       Focus.classList.add("focusedPasswordAllow");
+      showCharactersModal.classList.remove("show");
     } else {
       Focus.classList.contains("focusedPasswordAllow");
       Focus.classList.remove("focusedPasswordAllow");
       Focus.classList.add("focusedPasswordDeny");
+      showCharactersModal.classList.add("show");
     }
   });
 }
