@@ -1,6 +1,6 @@
 let pswrd = document.querySelector("#pswrd");
 let toggleBtn = document.querySelector("#toggleBtn");
-let showCharactersModal = document.querySelector(".validation");
+const showCharactersModal = document.querySelector(".validation");
 
 let lowerCase = document.querySelector("#lower");
 let upperCase = document.querySelector("#upper");
@@ -27,7 +27,14 @@ toggleBtn.addEventListener("click", function () {
 pswrd.addEventListener("click", showHowManyCharacters);
 
 function showHowManyCharacters() {
-  showCharactersModal.classList.add("show");
+    showCharactersModal.classList.add("show-validation");
+    if(lowerCaseLetters.test(pswrd.value) === true &&
+      upperCaseLetters.test(pswrd.value) === true &&
+      numbers.test(pswrd.value) === true &&
+      specialCharacters.test(pswrd.value) === true &&
+      minimumLength.test(pswrd.value) === true) {
+        showCharactersModal.classList.remove("show-validation");
+    }
 }
 
 pswrd.addEventListener("keyup", checkPassword);
@@ -75,12 +82,12 @@ function checkPassword() {
       Focus.classList.contains("focusedPasswordDeny");
       Focus.classList.remove("focusedPasswordDeny");
       Focus.classList.add("focusedPasswordAllow");
-      showCharactersModal.classList.remove("show");
+      showCharactersModal.classList.remove("show-validation");
     } else {
       Focus.classList.contains("focusedPasswordAllow");
       Focus.classList.remove("focusedPasswordAllow");
       Focus.classList.add("focusedPasswordDeny");
-      showCharactersModal.classList.add("show");
+      showCharactersModal.classList.add("show-validation");
     }
   });
 }

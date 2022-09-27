@@ -72,10 +72,10 @@ body {
     top: 30px;
     transition: 2s;
 }
-.hide {
+.hide-validation {
     opacity: 0;
 }
-.show {
+.show-validation {
     opacity: 1;
 }
 .validation ul {
