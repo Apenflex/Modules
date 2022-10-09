@@ -20,8 +20,11 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: 0;
     height: 100%;
     background: #000ee6;
+    border-radius: 30px;
+    transition: 0.3s width;
 }
 .nav {
     width: 300px;
@@ -50,6 +53,8 @@
 }
 .active {
     color: #000ee6;
+    transition: 1.5s color;
+    font-weight: bold;
 }
 main {
     overflow-y: scroll;
