@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+.login-page-wrapp {
+	height: 100vh;
+}
+
+.login-form-wrap {
+	width: 50%;
+}
+
+.login-form-wrap .form-card {
+	max-width: 500px;
+	width: 100%;
+	margin-right: 30px;
+}
+
+.login-form-wrap .form-card .card-title {
+	color: var(--gray);
+}
+
+.login-greeting-screen {
+	background: var(--teal);
+	width: 50%;
+	padding: 20px;
+}
+
+.login-greeting-screen .login-greeting-screen-text {
+	max-width: 500px;
+}
+
+.login-greeting-screen .login-greeting-screen-text {
+	color: var(--white);
+}
+
+.login-greeting-screen .login-greeting-screen-title {
+	margin-bottom: 30px;
+	text-transform: capitalize;
+}
+
+.login-greeting-screen .login-greeting-screen-description {
+	line-height: 1.4;
+}
+
+.is-invalid {
+	animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+	}
+	50% {
+		box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.4);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+	}
+}
+.alert-danger {
+	animation: slow-show-hide 0.4s ease;
+}
+
+@keyframes slow-show-hide {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.4;
+	}
+	60% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.form-group {
+	position: relative;
+}
+label {
+	margin-bottom: 5px;
+}
+.form-control {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.form-control.is-invalid {
+	background-image: unset;
+}
+
+#toggleBtn {
+	position: absolute;
+	top: 30px;
+	right: 8px;
+	width: 34px;
+	height: 34px;
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#toggleBtn::before {
+	content: "\f06e";
+	font-family: fontAwesome;
+}
+#toggleBtn.hide::before {
+	content: "\f070";
+}
+.validation {
+	background: var(--teal);
+	padding: 7px;
+	margin-top: 30px;
+	border-radius: 0.25rem;
+	box-shadow: 0 15px 25px rgb(0 0 0 / 15%);
+	position: absolute;
+	top: 45px;
+	right: 0;
+	transition: 1.6s ease;
+	width: 265px;
+}
+.hide-validation {
+    opacity: 0;
+}
+.show-validation {
+    opacity: 1;
+}
+.validation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+	margin: 0;
+}
+.validation ul li {
+    position: relative;
+    list-style: none;
+    color: #fff;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.validation ul li.valid {
+    color: rgba(255, 255, 255, 0.5);
+}
+.validation ul li::before {
+    content: "\f192";
+    /* display: inline-flex; */
+    font-family: fontAwesome;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+.validation ul li.valid::before {
+    content: '\f00c';
+    color: rgb(255, 255, 255);
+}
