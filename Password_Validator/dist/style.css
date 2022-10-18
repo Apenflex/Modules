@@ -9779,35 +9779,56 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
 }
 
-.login-page-wrapp {
-	height: 100vh;
+.containers {
+	width: min(100%, 1170px);
+	margin-left: auto;
+	margin-right: auto;
 }
+/* .login-page-wrapp {
 
+} */
+@media(max-width: 768px) {
+	.login-page-wrapp {
+		flex-direction: column-reverse;
+	}
+}
 .login-form-wrap {
-	width: 50%;
+	flex-basis: 50%;
+	margin: 0 10px;
+	justify-content: center;
 }
 
 .login-form-wrap .form-card {
 	max-width: 500px;
 	width: 100%;
-	margin-right: 30px;
+	height: 100%;
 }
 
 .login-form-wrap .form-card .card-title {
 	color: var(--gray);
 }
 
+.login-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn-primary {
+	width: 120px;
+}
+
 .login-greeting-screen {
 	background: var(--teal);
-	width: 50%;
+	flex-basis: 50%;
 	padding: 20px;
+	margin: 0 10px;
 }
 
 .login-greeting-screen .login-greeting-screen-text {
@@ -9873,8 +9894,8 @@ label {
 	margin-bottom: 5px;
 }
 .form-control {
-    font-size: 15px;
-    letter-spacing: 0.5px;
+	font-size: 15px;
+	letter-spacing: 0.5px;
 }
 
 .form-control.is-invalid {
@@ -9914,38 +9935,39 @@ label {
 	width: 265px;
 }
 .hide-validation {
-    opacity: 0;
+	opacity: 0;
 }
 .show-validation {
-    opacity: 1;
+	opacity: 1;
 }
 .validation ul {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    grid-gap: 8px;
-    gap: 8px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	grid-gap: 8px;
+	gap: 8px;
 	margin: 0;
 }
 .validation ul li {
-    position: relative;
-    list-style: none;
-    color: #fff;
-    font-size: 15px;
-    transition: 0.5s;
+	position: relative;
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	transition: 0.5s;
 }
 .validation ul li.valid {
-    color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.5);
 }
 .validation ul li::before {
-    content: "\f192";
-    /* display: inline-flex; */
-    font-family: fontAwesome;
-    height: 20px;
-    width: 20px;
-    margin-right: 10px;
+	content: "\f192";
+	/* display: inline-flex; */
+	font-family: fontAwesome;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
 }
 .validation ul li.valid::before {
-    content: '\f00c';
-    color: rgb(255, 255, 255);
+	content: "\f00c";
+	color: rgb(255, 255, 255);
 }
+
