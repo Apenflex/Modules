@@ -1,19 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
 }
 
+.containers {
+	width: min(100%, 1170px);
+	margin-inline: auto;
+}
 /* .login-page-wrapp {
-	height: 100vh;
-} */
 
+} */
+@media(max-width: 768px) {
+	.login-page-wrapp {
+		flex-direction: column-reverse;
+	}
+}
 .login-form-wrap {
-	width: 50%;
+	flex-basis: 50%;
 	margin: 0 10px;
 	justify-content: center;
 }
@@ -33,9 +41,13 @@
 	flex-direction: column;
 }
 
+.btn-primary {
+	width: 120px;
+}
+
 .login-greeting-screen {
 	background: var(--teal);
-	width: 50%;
+	flex-basis: 50%;
 	padding: 20px;
 	margin: 0 10px;
 }
@@ -103,8 +115,8 @@ label {
 	margin-bottom: 5px;
 }
 .form-control {
-    font-size: 15px;
-    letter-spacing: 0.5px;
+	font-size: 15px;
+	letter-spacing: 0.5px;
 }
 
 .form-control.is-invalid {
@@ -144,37 +156,37 @@ label {
 	width: 265px;
 }
 .hide-validation {
-    opacity: 0;
+	opacity: 0;
 }
 .show-validation {
-    opacity: 1;
+	opacity: 1;
 }
 .validation ul {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 	margin: 0;
 }
 .validation ul li {
-    position: relative;
-    list-style: none;
-    color: #fff;
-    font-size: 15px;
-    transition: 0.5s;
+	position: relative;
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	transition: 0.5s;
 }
 .validation ul li.valid {
-    color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.5);
 }
 .validation ul li::before {
-    content: "\f192";
-    /* display: inline-flex; */
-    font-family: fontAwesome;
-    height: 20px;
-    width: 20px;
-    margin-right: 10px;
+	content: "\f192";
+	/* display: inline-flex; */
+	font-family: fontAwesome;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
 }
 .validation ul li.valid::before {
-    content: '\f00c';
-    color: rgb(255, 255, 255);
+	content: "\f00c";
+	color: rgb(255, 255, 255);
 }
