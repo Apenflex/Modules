@@ -8,28 +8,36 @@
 	font-family: "Roboto", sans-serif;
 }
 
-.login-page-wrapp {
+/* .login-page-wrapp {
 	height: 100vh;
-}
+} */
 
 .login-form-wrap {
 	width: 50%;
+	margin: 0 10px;
+	justify-content: center;
 }
 
 .login-form-wrap .form-card {
 	max-width: 500px;
 	width: 100%;
-	margin-right: 30px;
+	height: 100%;
 }
 
 .login-form-wrap .form-card .card-title {
 	color: var(--gray);
 }
 
+.login-form {
+	display: flex;
+	flex-direction: column;
+}
+
 .login-greeting-screen {
 	background: var(--teal);
 	width: 50%;
 	padding: 20px;
+	margin: 0 10px;
 }
 
 .login-greeting-screen .login-greeting-screen-text {
