@@ -10,6 +10,8 @@ import { notify } from "./views/notifications";
 
 import { showHowManyCharacters, checkPassword, checkPasswordFocus, } from "./helpers/regexp-validate";
 
+import { getNews } from "./services/news.service";
+
 const { form, inputEmail, inputPassword } = ui;
 const { body, pswrd, toggleBtn, showCharactersModal } = check;
 const inputs = [inputEmail, inputPassword];
@@ -59,6 +61,7 @@ async function onSubmit() {
 
   try {
     await login(inputEmail.value, inputPassword.value);
+    await getNews();
     form.reset();
     // Show success notify
     notify({ msg: 'Login success', className: 'alert-success' });

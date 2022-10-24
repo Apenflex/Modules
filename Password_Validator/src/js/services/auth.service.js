@@ -1,5 +1,9 @@
 import axios from '../plugins/axios';
 
+// Login: denis.m.pcspace@gmail.com
+
+// Password: dmgame12345
+
 /**
  * Function login. Make login request to API
  * @param {String} email 
