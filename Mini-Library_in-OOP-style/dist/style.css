@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.header {
+  font-size: 34px;
+  text-align: center;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+hr {
+  margin-top: 30px;
+}
+
+.blocks {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.blocks_item {
+  width: 360px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+.blocks_item img {
+  width: 100%;
+}
+.blocks_item__descr {
+  margin-top: 10px;
+}

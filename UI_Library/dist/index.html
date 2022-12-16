@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="button-wrapper d-flex f-space-around f-wrap">
+            <button class="btn btn-primary m20" id="first">Fade out first text</button>
+            <button class="btn btn-dark m20" data-count="second">Fade out second text</button>
+            <button class="btn btn-warning m20" id="third">Fade out all texts</button>
+
+            <!-- DropDown Menu -->
+            <div class="dropdown m20">
+                <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">DropDown Button</button>
+                <div class="dropdown-menu" data-toggle-id="dropdownMenuButton">
+                    <a href="#" class="dropdown-item">Action #1</a>
+                    <a href="#" class="dropdown-item">Action #2</a>
+                    <a href="#" class="dropdown-item">Action #3</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="goods d-flex f-space-around f-wrap">
+            <div class="card">
+                <img class="card-img" src="https://mymodernmet.com/wp/wp-content/uploads/2019/12/sinhue-boksberger-forest-photo.jpg" alt="photo">
+                <div class="card-body">
+                    <div class="card-title">Card title #1</div>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem aspernatur molestiae fuga ex similique tempore quos eum nobis, accusantium beatae atque obcaecati quisquam consectetur et laudantium recusandae labore nemo quis!</p>
+                    <a href="#" id="trigger" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Link to</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://mymodernmet.com/wp/wp-content/uploads/2019/12/sinhue-boksberger-forest-photo.jpg" alt="photo">
+                <div class="card-body">
+                    <div class="card-title">Card title #2</div>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem aspernatur molestiae fuga ex similique tempore quos eum nobis, accusantium beatae atque obcaecati quisquam consectetur et laudantium recusandae labore nemo quis!</p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Link to</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <!-- <div class="modal" id="exampleModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button class="close" data-close>
+                        <span>&times;</span>
+                    </button>
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            Modal Title
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia perspiciatis sed minima odio voluptatibus, qui aspernatur nisi numquam! Autem debitis cum quia laboriosam, molestiae optio a vel dolore voluptates!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia perspiciatis sed minima odio voluptatibus, qui aspernatur nisi numquam! Autem debitis cum quia laboriosam, molestiae optio a vel dolore voluptates!
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-close>Close</button>
+                        <button class="btn btn-success">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="modal" id="exampleModal2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button class="close" data-close>
+                        <span>&times;</span>
+                    </button>
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            Modal Title2
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia perspiciatis sed minima odio voluptatibus, qui aspernatur nisi numquam! Autem debitis cum quia laboriosam, molestiae optio a vel dolore voluptates!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia perspiciatis sed minima odio voluptatibus, qui aspernatur nisi numquam! Autem debitis cum quia laboriosam, molestiae optio a vel dolore voluptates!
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-close>Close</button>
+                        <button class="btn btn-success">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tab mt-20 block-center">
+            <div class="tab-panel f-wrap f-centered f-space-around" data-tabpanel>
+                <div class="tab-item tab-item--active">Content 1</div>
+                <div class="tab-item">Content 2</div>
+                <div class="tab-item">Content 3</div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton2">DropDown Button</button>
+                    <div class="dropdown-menu" data-toggle-id="dropdownMenuButton2">
+                        <a href="#" class="dropdown-item">Action #1</a>
+                        <a href="#" class="dropdown-item">Action #2</a>
+                        <a href="#" class="dropdown-item">Action #3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content tab-content--active">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Modi laboriosam dolorem aperiam porro numquam, earum id adipisci 
+                voluptatum placeat dolore at expedita molestias distinctio nihil 
+                enim cupiditate provident fugit tempore.
+                <br><br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </div>
+
+            <div class="tab-content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Modi laboriosam dolorem aperiam porro numquam, earum id adipisci 
+                voluptatum placeat dolore at expedita molestias distinctio nihil 
+                enim cupiditate provident fugit tempore.
+                <br><br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Nemo dolorum laboriosam officiis tempore commodi iste laudantium sunt? 
+                Quia ex consequatur aspernatur qui, in explicabo ad odit minima ea nisi quaerat.
+                <br><br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Nemo dolorum laboriosam officiis tempore commodi iste laudantium sunt? 
+                Quia ex consequatur aspernatur qui, in explicabo ad odit minima ea nisi quaerat.
+                
+                Nemo dolorum laboriosam officiis tempore commodi iste laudantium sunt? 
+                Quia ex consequatur aspernatur qui, in explicabo ad odit minima ea nisi quaera
+            </div>
+
+            <div class="tab-content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Modi laboriosam dolorem aperiam porro numquam, earum id adipisci 
+                voluptatum placeat dolore at expedita mo.
+            </div>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion mt-20 block-center">
+            <div class="accordion-head">
+                <span>Collapse first element</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-inner">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nulla inventore sint blanditiis corporis doloribus sed aperiam 
+                    culpa quam quibusdam quidem maiores, deserunt suscipit nesciunt 
+                    cumque, magni assumenda cupiditate accusamus ut.
+                </div>
+            </div>
+
+            <div class="accordion-head">
+                <span>Collapse second element</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-inner">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nulla inventore sint blanditiis corporis doloribus sed aperiam 
+                    culpa quam quibusdam quidem maiores, deserunt suscipit nesciunt 
+                    cumque, magni assumenda cupiditate accusamus ut.
+                </div>
+            </div>
+
+            <div class="accordion-head">
+                <span>Collapse third element</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-inner">
+                    12344554Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nulla inni assumenda cupiditate accusamus ut.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel" id="example">
+            <ol class="carousel-indicators">
+                <li data-slide-to="0" class="active"></li>
+                <li data-slide-to="1"></li>
+                <li data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-slides">
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1531804055935-76f44d7c3621?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG98ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvdG98ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1533536201350-93ebe24101f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBob3RvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="slide">
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="carousel-prev" data-slide="prev">
+                <span class="carousel-prev-icon">&lt;</span>
+            </a>
+            <a href="#" class="carousel-next" data-slide="next">
+                <span class="carousel-next-icon">&gt;</span>
+            </a>
+        </div>
+
+    <!-- End Container -->
+    </div>
+
+    <script src='script.js'></script>
+</body>
+</html>

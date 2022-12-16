@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: min(100% - 15px, 1170px);
+    margin-inline: auto;
+}

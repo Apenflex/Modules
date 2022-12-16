@@ -1,0 +1,106 @@
+{
+  "people": [
+    {
+      "name": "John",
+      "surname": "Smith",
+      "sex": "male",
+      "age": 26,
+      "photo": "https://m.media-amazon.com/images/M/MV5BMjM3MjM3NTAxM15BMl5BanBnXkFtZTgwMTY0Nzg2OTE@._V1_.jpg"
+    },
+    {
+      "name": "Angela",
+      "surname": "Whinston",
+      "sex": "female",
+      "age": 31,
+      "photo": "https://onthewingsoflove.blob.core.windows.net/album/011816-Angela/1.jpg"
+    },
+    {
+      "name": "Alex",
+      "surname": "Solberry",
+      "sex": "male",
+      "age": 35,
+      "photo": "https://images.unsplash.com/photo-1504199367641-aba8151af406?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "name": "Anna",
+      "surname": "Rayan",
+      "sex": "female",
+      "age": 23,
+      "photo": "https://pbs.twimg.com/profile_images/1127551365918679040/On8uLuSc.jpg"
+    },
+    {
+      "name": "Michael",
+      "surname": "Dobkin",
+      "sex": "male",
+      "age": 30,
+      "photo": "https://wwwimage-secure.cbsstatic.com/thumbnails/photos/w425/cast/3b2b388f58aae2da_yr_michaelm_800x1000.jpg"
+    },
+    {
+      "name": "John",
+      "surname": "Smith",
+      "age": 25,
+      "id": 0.5678731394030136
+    },
+    {
+      "name": "John",
+      "surname": "Smith",
+      "age": 25,
+      "id": 0.6164152240962077
+    },
+    {
+      "name": "John",
+      "surname": "Smith",
+      "age": 25,
+      "id": 0.29592991903056176
+    },
+    {
+      "name": "John",
+      "surname": "Smith",
+      "age": 25,
+      "id": 0.3329092536027023
+    },
+    {
+      "id": 1.6164152240962077
+    },
+    {
+      "id": 2.6164152240962077
+    },
+    {
+      "id": 3.6164152240962077
+    },
+    {
+      "id": 4.616415224096208
+    },
+    {
+      "id": 5.616415224096208
+    },
+    {
+      "id": 6.616415224096208
+    },
+    {
+      "name": "dsadada",
+      "age": "dasada",
+      "id": "0.018071383361611515"
+    },
+    {
+      "name": "dfwewr334",
+      "age": "ffwrerwr43",
+      "id": "0.7538833327833889"
+    },
+    {
+      "name": "",
+      "age": "",
+      "id": "0.37772602562141255"
+    },
+    {
+      "name": "",
+      "age": "",
+      "id": "0.815862646332558"
+    },
+    {
+      "name": "",
+      "age": "",
+      "id": "0.13932004363958028"
+    }
+  ]
+}
